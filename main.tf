@@ -26,7 +26,6 @@ resource "aws_iam_group_membership" "group_membership" {
 
 resource "aws_iam_group_policy_attachment" "group_policies" {
   for_each = toset([
-    "arn:aws:iam::aws:policy/ReadOnlyAccess",
     "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
     "arn:aws:iam::aws:policy/IAMUserChangePassword"
   ])
